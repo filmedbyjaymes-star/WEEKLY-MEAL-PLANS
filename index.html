@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>Meal Plan</title>
+<link rel="manifest" href="data:application/json,{}"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Meal Plan"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0d0d0f;color:#f0f0f5;font-family:'Barlow',system-ui,sans-serif;min-height:100vh;-webkit-text-size-adjust:none}
+.app{max-width:430px;margin:0 auto;padding-bottom:60px}
+.bc{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase}
+.mu{font-size:10px;font-weight:600;color:#555;letter-spacing:.1em;text-transform:uppercase}
+.mc{transition:border-color .15s;cursor:pointer}
+.ir{border-bottom:1px solid rgba(255,255,255,0.05)}
+.ir:last-child{border-bottom:none}
+@keyframes fu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fu .2s ease both}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div style="min-height:100vh;display:flex;align-items:center;justify-content:center">
+    <div style="color:#555;font-size:14px">Loading your plan...</div>
+  </div>
+</div>
+
+<script>
+const PLAN_KEY = 'carbcycle-mealplan-v1';
+
+const DEFAULT_PLAN = {
+  weekLabel: "Mar 28 – Mar 29",
+  days: {
+    fri: {
+      name:"Friday",date:"Mar 28",type:"high",label:"HIGH CARB",desc:"Gym 6:30 AM + Soccer ~5:30 PM",
+      macros:{cal:1930,pro:158,carb:210,fat:40},
+      meals:[
+        {icon:"⚡",time:"Pre-Gym · 6:00 AM",name:"Pre-Workout Fuel",macros:{kcal:220,p:10,c:38,f:3},
+         ingredients:[{n:"Banana",a:"1 medium"},{n:"L'Oven Protein Bread",a:"1 slice"},{n:"PB2 Powdered Peanut Butter",a:"1.5 tbsp"},{n:"Honey",a:"½ tsp"}],
+         note:"Mix PB2 with a little water + honey into a spread. Eat 25–30 min before gym."},
+        {icon:"🥞",time:"Post-Gym Breakfast · 8:30 AM",name:"Kodiak Power Cakes",macros:{kcal:520,p:50,c:78,f:6},
+         ingredients:[{n:"Kodiak Power Cakes mix",a:"¾ cup dry (1.5 srv)"},{n:"Liquid egg whites (in batter)",a:"½ cup"},{n:"Frozen berries (warmed as syrup)",a:"½ cup"},{n:"Honey",a:"1 tsp"},{n:"Ground cinnamon",a:"pinch"}],
+         note:"Mix egg whites into batter before cooking. Microwave berries 60 sec, pour over like syrup. Hits your sweet tooth hard."},
+        {icon:"🍗",time:"Lunch · 12:30 PM",name:"Chicken & Rice Bowl",macros:{kcal:490,p:46,c:60,f:11},
+         ingredients:[{n:"Chicken breast (cooked)",a:"6 oz"},{n:"White rice (cooked)",a:"1 cup"},{n:"Green bell pepper",a:"½ pepper, sliced"},{n:"White onion",a:"¼ cup, diced"},{n:"Mexican 4 cheese blend",a:"1 tbsp"},{n:"Lime juice",a:"½ lime"}],
+         note:"Season chicken with cumin, garlic powder, salt. Sauté peppers + onions in same pan. Rice is your biggest carb hit of the day."},
+        {icon:"⚽",time:"Pre-Soccer Snack · 4:30 PM",name:"Hero Bagel + PB2 Spread",macros:{kcal:200,p:11,c:28,f:3},
+         ingredients:[{n:"Hero Everything Bagel",a:"1 bagel"},{n:"PB2 Powdered Peanut Butter",a:"1 tbsp"},{n:"Honey",a:"½ tsp"}],
+         note:"Toast the bagel. Mix PB2 + honey + tiny bit of water into a thick spread. Light enough you won't cramp on the field."},
+        {icon:"🍠",time:"Post-Soccer Dinner · 7:30 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:500,p:41,c:42,f:17},
+         ingredients:[{n:"Chicken thighs (cooked)",a:"6 oz"},{n:"Sweet potato",a:"1 medium"},{n:"Honey + Cinnamon (on potato)",a:"1 tsp + pinch"},{n:"Iceberg lettuce",a:"1.5 cups"},{n:"Mini cucumbers",a:"1, sliced"},{n:"Cherry tomatoes",a:"6–8"},{n:"Shaved parmesan blend",a:"1 tbsp"},{n:"Lime juice",a:"½ lime"}],
+         note:"Bake sweet potato at 400°F for 45 min or microwave 5–6 min. Top with cinnamon + honey — tastes like dessert."}
+      ]
+    },
+    sat: {
+      name:"Saturday",date:"Mar 29",type:"low",label:"LOW CARB",desc:"Rest Day",
+      macros:{cal:1470,pro:161,carb:95,fat:52},
+      meals:[
+        {icon:"🍳",time:"Breakfast · 9:30 AM",name:"Egg White Scramble on Toast",macros:{kcal:420,p:53,c:22,f:15},
+         ingredients:[{n:"Brown eggs (whole)",a:"3 eggs"},{n:"Liquid egg whites",a:"¾ cup"},{n:"L'Oven Protein Bread (toasted)",a:"2 slices"},{n:"Mini cucumbers (side)",a:"1, sliced"},{n:"Cherry tomatoes (side)",a:"6–8"},{n:"Salt, pepper, hot sauce",a:"to taste"}],
+         note:"Scramble whole eggs + egg whites together. 2 slices of protein bread max on rest days."},
+        {icon:"🥗",time:"Lunch · 1:00 PM",name:"Big Chicken & Avocado Salad",macros:{kcal:440,p:47,c:14,f:19},
+         ingredients:[{n:"Chicken breast (grilled)",a:"7 oz"},{n:"Iceberg lettuce",a:"2 cups"},{n:"Mini cucumbers",a:"1, sliced"},{n:"Cherry tomatoes",a:"8–10"},{n:"Organic carrots",a:"¼ cup shredded"},{n:"Avocado",a:"½ avocado"},{n:"Shaved parmesan blend",a:"1 tbsp"},{n:"Lime juice (dressing)",a:"1 lime"}],
+         note:"Avocado replaces rice today. Make this bowl BIG — volume is key for satiety on low carb days."},
+        {icon:"🫐",time:"Snack · 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},
+         ingredients:[{n:"Garden of Life Vanilla Chai protein",a:"1 scoop"},{n:"Frozen blueberries",a:"½ cup"},{n:"Frozen sliced strawberries",a:"½ cup"},{n:"1% low fat milk",a:"½ cup"},{n:"Water",a:"½ cup"}],
+         note:"Blend everything cold. This is your sweet fix for the day."},
+        {icon:"🥔",time:"Dinner · 7:00 PM",name:"Chicken Thighs + Roasted Potatoes",macros:{kcal:380,p:33,c:26,f:14},
+         ingredients:[{n:"Chicken thighs (cooked)",a:"6 oz"},{n:"Red potatoes (small)",a:"4–5 small (~4 oz)"},{n:"Green bell pepper",a:"½ pepper, sliced"},{n:"White onion",a:"¼ cup, diced"},{n:"Lime juice",a:"½ lime"},{n:"Garlic powder, salt, pepper",a:"to taste"}],
+         note:"Small portion of potatoes is intentional — you need some carbs even on rest days. Roast at 425°F for 25 min."}
+      ]
+    }
+  }
+};
+
+let plan = DEFAULT_PLAN;
+let activeDay = 'fri';
+let expandedMeals = {};
+
+function loadPlan() {
+  try {
+    const saved = localStorage.getItem(PLAN_KEY);
+    if (saved) plan = JSON.parse(saved);
+  } catch(e) {}
+  render();
+}
+
+function toggleMeal(idx) {
+  expandedMeals[idx] = !expandedMeals[idx];
+  render();
+}
+
+function setDay(day) {
+  activeDay = day;
+  expandedMeals = {};
+  render();
+}
+
+function render() {
+  const d = plan.days[activeDay];
+  const hi = d.type === 'high';
+  const ac = hi ? '#f97316' : '#22c55e';
+  const acDim = hi ? 'rgba(249,115,22,0.13)' : 'rgba(34,197,94,0.13)';
+  const acBd = hi ? 'rgba(249,115,22,0.35)' : 'rgba(34,197,94,0.35)';
+  const dayKeys = Object.keys(plan.days);
+
+  let tabs = dayKeys.map(k => {
+    const dd = plan.days[k];
+    const isA = activeDay === k;
+    const a = dd.type === 'high' ? '#f97316' : '#22c55e';
+    const ad = dd.type === 'high' ? 'rgba(249,115,22,0.13)' : 'rgba(34,197,94,0.13)';
+    return `<div class="mc" onclick="setDay('${k}')" style="flex:1;padding:13px 10px;border-radius:12px;text-align:center;background:${isA?ad:'#16161a'};border:1.5px solid ${isA?a:'#2a2a33'}">
+      <div class="bc" style="font-size:20px">${dd.name}</div>
+      <div style="font-size:10px;font-weight:600;color:${isA?a:'#555'};margin-top:2px;letter-spacing:.07em;text-transform:uppercase">${dd.label}</div>
+      <div style="font-size:10px;color:#444;margin-top:1px">${dd.date}</div>
+    </div>`;
+  }).join('');
+
+  let meals = d.meals.map((m, idx) => {
+    const isEx = !!expandedMeals[idx];
+    const chips = [
+      {l:`${m.macros.kcal} kcal`,c:'#666',bg:'#1e1e24'},
+      {l:`${m.macros.p}g P`,c:'#60a5fa',bg:'rgba(96,165,250,0.1)'},
+      {l:`${m.macros.c}g C`,c:'#facc15',bg:'rgba(250,204,21,0.1)'},
+      {l:`${m.macros.f}g F`,c:'#f472b6',bg:'rgba(244,114,182,0.1)'},
+    ].map(ch=>`<span style="font-size:11px;font-weight:600;padding:2px 7px;border-radius:5px;color:${ch.c};background:${ch.bg}">${ch.l}</span>`).join('');
+
+    const ings = isEx ? m.ingredients.map(ing =>
+      `<div class="ir" style="display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0">
+        <span style="font-size:14px;color:#f0f0f5;font-weight:500">${ing.n}</span>
+        <span style="font-size:13px;color:#666;font-weight:600;margin-left:12px;white-space:nowrap">${ing.a}</span>
+      </div>`).join('') : '';
+
+    const body = isEx ? `<div style="padding:0 15px 15px;border-top:1px solid #242428">
+      <div class="mu" style="margin:12px 0 8px">Ingredients & Amounts</div>
+      ${ings}
+      <div style="margin-top:12px;padding:10px 12px;background:#1e1e24;border-radius:0 8px 8px 0;font-size:12px;color:#8888a0;line-height:1.55;border-left:3px solid ${ac}">${m.note}</div>
+    </div>` : '';
+
+    return `<div class="mc" onclick="toggleMeal(${idx})" style="margin:0 20px 10px;background:#16161a;border-radius:16px;border:1px solid ${isEx?'#3a3a48':'#242428'};overflow:hidden">
+      <div style="display:flex;align-items:center;gap:13px;padding:15px">
+        <div style="width:44px;height:44px;border-radius:12px;background:#1e1e24;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">${m.icon}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:10px;font-weight:600;color:#555;letter-spacing:.08em;text-transform:uppercase">${m.time}</div>
+          <div class="bc" style="font-size:18px;line-height:1.2;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${m.name}</div>
+          <div style="display:flex;gap:5px;margin-top:5px;flex-wrap:wrap">${chips}</div>
+        </div>
+        <div style="color:#555;font-size:18px;transition:transform .18s;transform:${isEx?'rotate(180deg)':'none'};flex-shrink:0">⌄</div>
+      </div>
+      ${body}
+    </div>`;
+  }).join('');
+
+  const macroBar = [
+    {v:d.macros.cal,u:'kcal',c:'#f0f0f5'},
+    {v:`${d.macros.pro}g`,u:'protein',c:'#60a5fa'},
+    {v:`${d.macros.carb}g`,u:'carbs',c:'#facc15'},
+    {v:`${d.macros.fat}g`,u:'fat',c:'#f472b6'},
+  ].map((m,i)=>`<div style="flex:1;text-align:center;border-left:${i>0?'1px solid #242428':'none'}">
+    <div class="bc" style="font-size:26px;color:${m.c};line-height:1">${m.v}</div>
+    <div class="mu" style="margin-top:3px">${m.u}</div>
+  </div>`).join('');
+
+  document.getElementById('app').innerHTML = `
+    <div class="app">
+      <div style="padding:28px 20px 0">
+        <div class="mu" style="margin-bottom:4px">Carb Cycle · ${plan.weekLabel}</div>
+        <div class="bc" style="font-size:42px;line-height:1">MEAL<br><span style="color:#f97316">PLAN</span></div>
+      </div>
+      <div style="display:flex;gap:8px;margin:22px 20px 0">${tabs}</div>
+      <div class="fu">
+        <div style="margin:18px 20px 0;padding:10px 14px;border-radius:10px;background:${acDim};border:1px solid ${acBd};display:flex;align-items:center;gap:10px">
+          <div style="width:8px;height:8px;border-radius:50%;background:${ac};box-shadow:0 0 6px ${ac};flex-shrink:0"></div>
+          <span class="bc" style="font-size:12px;letter-spacing:.14em;color:${ac}">${d.label} DAY</span>
+          <span style="font-size:11px;color:#555;margin-left:auto;text-align:right">${d.desc}</span>
+        </div>
+        <div style="margin:14px 20px 0;background:#16161a;border-radius:14px;padding:16px;border:1px solid #242428">
+          <div class="mu" style="margin-bottom:12px">Daily Targets</div>
+          <div style="display:flex">${macroBar}</div>
+        </div>
+        <div class="mu" style="padding:20px 20px 8px">Meals — Tap to expand</div>
+        ${meals}
+        <div style="margin:20px 20px 0;padding:14px 16px;background:#16161a;border-radius:14px;border:1px solid #242428;text-align:center">
+          <div style="font-size:12px;color:#60a5fa;font-weight:600;margin-bottom:8px">💧 4 × 48oz bottles daily</div>
+          <div style="font-size:12px;color:#555;line-height:1.6"><span style="color:#f0f0f5;font-weight:600">Sunday night:</span> send your full week schedule and your plan updates here.</div>
+        </div>
+      </div>
+    </div>`;
+}
+
+loadPlan();
+</script>
+</body>
+</html>
