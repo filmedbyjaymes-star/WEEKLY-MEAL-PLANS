@@ -321,142 +321,288 @@ html,body{min-height:100vh;overscroll-behavior:none;font-family:'Jost',sans-seri
   }
 
   // ============================================================
-  // JAYMES DATA
+  // JAYMES — Carb Cycle | Week of Apr 7
+  // High: Push(Mon) Legs(Wed) Lower+Soccer(Fri)
+  // Low:  Pull(Tue) Upper(Thu) Rest(Sat) Rest(Sun)
   // ============================================================
   var JAYMES = {days:{
-    mon:{name:"Mon",date:"Mar 31",type:"high",label:"High Carb",desc:"Push Day",macros:{cal:1930,pro:160,carb:210,fat:40},meals:[
-      {icon:"<E2><9A><A1>",time:"Pre-Gym 6:30 AM",name:"Pre-Workout Fuel",macros:{kcal:220,p:10,c:38,f:3},ings:[["Banana","120g"],["L'Oven Protein Bread","1 slice 40g"],["PB2","12g"],["Honey","3g"]],tip:"Mix PB2 + honey + water into a spread. Eat 25-30 min before gym."},
-      {icon:"&#x1F95E;",time:"Post-Gym 8:30 AM",name:"Kodiak Power Cakes",macros:{kcal:520,p:50,c:78,f:6},ings:[["Kodiak Power Cakes mix","85g"],["Liquid egg whites","120g"],["Frozen berries warmed","80g"],["Honey","7g"],["Cinnamon","1g"]],tip:"Mix egg whites into batter. Microwave berries 60 sec, pour over like syrup."},
-      {icon:"&#x1F357;",time:"Lunch 12:30 PM",name:"Chicken and Rice Bowl",macros:{kcal:490,p:46,c:60,f:11},ings:[["Chicken breast cooked","170g"],["White rice cooked","186g"],["Bell pepper","75g"],["Onion","40g"],["Mexican cheese blend","15g"],["Lime juice","15g"]],tip:"Season with cumin, garlic powder, salt."},
-      {icon:"&#x1F360;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:700,p:54,c:60,f:20},ings:[["Chicken thighs cooked","200g"],["Sweet potato","180g"],["Honey","7g"],["Cinnamon","1g"],["Side salad","150g"],["Lime juice","15g"]],tip:"Bake sweet potato 205C for 45 min or microwave 5-6 min. Cinnamon and honey on top."}
+    mon:{name:"Mon",date:"Apr 7",type:"high",label:"High Carb",desc:"Push Day",macros:{cal:1930,pro:160,carb:210,fat:40},meals:[
+      {icon:"&#x26A1;",time:"Pre-Gym 6:30 AM",name:"Pre-Workout Fuel",macros:{kcal:220,p:10,c:38,f:3},
+       ings:[["Banana","120g"],["L'Oven Protein Bread","1 slice 40g"],["PB2","12g"],["Honey","3g"]],
+       tip:"Mix PB2 + honey + a little water into a spread on the bread. Eat 25-30 min before hitting the gym."},
+      {icon:"&#x1F95E;",time:"Post-Gym 8:30 AM",name:"Kodiak Power Cakes",macros:{kcal:520,p:50,c:78,f:6},
+       ings:[["Kodiak Power Cakes mix","85g dry"],["Liquid egg whites in batter","120g"],["Frozen berries warmed as syrup","80g"],["Honey","7g"],["Ground cinnamon","1g"]],
+       tip:"Mix egg whites directly into the batter before cooking. Microwave berries 60 sec and pour over like syrup. This is your biggest carb meal of the day."},
+      {icon:"&#x1F357;",time:"Lunch 12:30 PM",name:"Chicken and Rice Bowl",macros:{kcal:490,p:46,c:60,f:11},
+       ings:[["Chicken breast cooked","170g"],["White rice cooked","186g"],["Bell pepper","75g"],["Onion","40g"],["Mexican cheese blend","15g"],["Lime juice","15g"]],
+       tip:"Season chicken with cumin, garlic powder, salt. Saute peppers and onion in the same pan after chicken."},
+      {icon:"&#x1F360;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:700,p:54,c:60,f:20},
+       ings:[["Chicken thighs cooked","200g"],["Sweet potato","180g"],["Honey","7g"],["Ground cinnamon","1g"],["Side salad","150g"],["Lime juice","15g"]],
+       tip:"Bake sweet potato at 205C for 45 min or microwave 5-6 min. Top with cinnamon and honey. This is your reward for push day."}
     ]},
-    tue:{name:"Tue",date:"Apr 1",type:"low",label:"Low Carb",desc:"Pull Day",macros:{cal:1470,pro:161,carb:95,fat:52},meals:[
-      {icon:"&#x1F373;",time:"Breakfast 8:00 AM",name:"Egg White Scramble + Toast",macros:{kcal:420,p:53,c:22,f:15},ings:[["Brown eggs","3 eggs 165g"],["Liquid egg whites","180g"],["L'Oven Protein Bread","2 slices 80g"],["Cucumber","100g"],["Cherry tomatoes","90g"]],tip:"2 slices protein bread max on low-carb days."},
-      {icon:"&#x1F957;",time:"Lunch 12:30 PM",name:"Chicken and Avocado Salad",macros:{kcal:440,p:47,c:14,f:19},ings:[["Chicken breast grilled","200g"],["Iceberg lettuce","80g"],["Cucumber","100g"],["Cherry tomatoes","120g"],["Carrots","30g"],["Avocado","75g"],["Parmesan blend","10g"],["Lime juice","30g"]],tip:"Make it big. Volume keeps you full on low-carb days."},
-      {icon:"&#x1FAD0;",time:"Snack 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},ings:[["Garden of Life Vanilla Chai","1 scoop 38g"],["Frozen blueberries","75g"],["Frozen strawberries","75g"],["1% milk","120g"],["Water","120g"]],tip:"Blend cold."},
-      {icon:"&#x1F954;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Red Potatoes",macros:{kcal:380,p:33,c:26,f:14},ings:[["Chicken thighs cooked","170g"],["Red potatoes","115g"],["Bell pepper","75g"],["Onion","40g"],["Lime juice","15g"],["Garlic powder salt pepper","to taste"]],tip:"Roast at 220C for 25 min."}
+    tue:{name:"Tue",date:"Apr 8",type:"low",label:"Low Carb",desc:"Pull Day",macros:{cal:1470,pro:161,carb:95,fat:52},meals:[
+      {icon:"&#x1F373;",time:"Breakfast 8:00 AM",name:"Egg White Scramble + Protein Toast",macros:{kcal:420,p:53,c:22,f:15},
+       ings:[["Brown eggs whole","3 eggs 165g"],["Liquid egg whites","180g"],["L'Oven Protein Bread toasted","2 slices 80g"],["Mini cucumber side","100g"],["Cherry tomatoes side","90g"]],
+       tip:"Scramble whole eggs and egg whites together for a creamy texture. 2 slices protein bread max on low carb days."},
+      {icon:"&#x1F957;",time:"Lunch 12:30 PM",name:"Chicken and Avocado Salad",macros:{kcal:440,p:47,c:14,f:19},
+       ings:[["Chicken breast grilled","200g"],["Iceberg lettuce","80g"],["Mini cucumber","100g"],["Cherry tomatoes","120g"],["Carrots","30g"],["Avocado","75g"],["Shaved parmesan blend","10g"],["Lime juice","30g"]],
+       tip:"Make this bowl big. Volume is what keeps you full on low carb days. Avocado replaces rice today."},
+      {icon:"&#x1FAD0;",time:"Snack 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},
+       ings:[["Garden of Life Vanilla Chai","1 scoop 38g"],["Frozen blueberries","75g"],["Frozen strawberries","75g"],["1% milk","120g"],["Water","120g"]],
+       tip:"Blend cold. Your sweet fix for the day. Hits the sweet tooth and gives you 28g protein."},
+      {icon:"&#x1F954;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Red Potatoes",macros:{kcal:380,p:33,c:26,f:14},
+       ings:[["Chicken thighs cooked","170g"],["Red potatoes","115g"],["Bell pepper","75g"],["Onion","40g"],["Lime juice","15g"],["Garlic powder salt pepper","to taste"]],
+       tip:"Small potato portion is intentional. You need some carbs even on low days to prevent muscle breakdown. Roast potatoes at 220C for 25 min."}
     ]},
-    wed:{name:"Wed",date:"Apr 2",type:"high",label:"High Carb",desc:"Leg Day",macros:{cal:1930,pro:160,carb:210,fat:40},meals:[
-      {icon:"&#x1F34C;",time:"Pre-Gym 6:30 AM",name:"Pre-Workout Fuel",macros:{kcal:220,p:10,c:38,f:3},ings:[["Banana","120g"],["L'Oven Protein Bread","1 slice 40g"],["PB2","12g"],["Honey","3g"]],tip:"Leg day needs the most fuel."},
-      {icon:"&#x1F95E;",time:"Breakfast 8:30 AM",name:"Kodiak Power Cakes",macros:{kcal:520,p:50,c:78,f:6},ings:[["Kodiak Power Cakes mix","85g"],["Liquid egg whites","120g"],["Frozen berries","80g"],["Honey","7g"],["Cinnamon","1g"]],tip:"Highest carb meal. Legs need glycogen."},
-      {icon:"&#x1F357;",time:"Lunch 12:30 PM",name:"Chicken and Rice Bowl",macros:{kcal:490,p:46,c:60,f:11},ings:[["Chicken breast cooked","170g"],["White rice cooked","186g"],["Bell pepper","75g"],["Onion","40g"],["Mexican cheese blend","15g"],["Lime juice","15g"]],tip:"Prep Monday and Wednesday together to save time."},
-      {icon:"&#x1F360;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:700,p:54,c:60,f:20},ings:[["Chicken thighs cooked","200g"],["Sweet potato","180g"],["Honey","7g"],["Cinnamon","1g"],["Side salad","150g"],["Lime juice","15g"]],tip:"Leg days warrant the bigger dinner."}
+    wed:{name:"Wed",date:"Apr 9",type:"high",label:"High Carb",desc:"Leg Day",macros:{cal:1930,pro:160,carb:210,fat:40},meals:[
+      {icon:"&#x1F34C;",time:"Pre-Gym 6:30 AM",name:"Pre-Workout Fuel",macros:{kcal:220,p:10,c:38,f:3},
+       ings:[["Banana","120g"],["L'Oven Protein Bread","1 slice 40g"],["PB2","12g"],["Honey","3g"]],
+       tip:"Leg day needs the most carb fuel of any day. Do not skip this pre-workout meal."},
+      {icon:"&#x1F95E;",time:"Post-Gym 8:30 AM",name:"Kodiak Power Cakes",macros:{kcal:520,p:50,c:78,f:6},
+       ings:[["Kodiak Power Cakes mix","85g dry"],["Liquid egg whites in batter","120g"],["Frozen berries warmed as syrup","80g"],["Honey","7g"],["Ground cinnamon","1g"]],
+       tip:"Your glycogen needs replenishment after legs. This meal does that. Mix egg whites into batter before cooking."},
+      {icon:"&#x1F357;",time:"Lunch 12:30 PM",name:"Chicken and Rice Bowl",macros:{kcal:490,p:46,c:60,f:11},
+       ings:[["Chicken breast cooked","170g"],["White rice cooked","186g"],["Bell pepper","75g"],["Onion","40g"],["Mexican cheese blend","15g"],["Lime juice","15g"]],
+       tip:"Prep Monday and Wednesday bowls together to save time. Same seasoning same method."},
+      {icon:"&#x1F360;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:700,p:54,c:60,f:20},
+       ings:[["Chicken thighs cooked","200g"],["Sweet potato","180g"],["Honey","7g"],["Ground cinnamon","1g"],["Side salad","150g"],["Lime juice","15g"]],
+       tip:"Leg days get the bigger dinner. Recover well tonight."}
     ]},
-    thu:{name:"Thu",date:"Apr 3",type:"low",label:"Low Carb",desc:"Upper Day",macros:{cal:1470,pro:161,carb:95,fat:52},meals:[
-      {icon:"&#x1F373;",time:"Breakfast 8:00 AM",name:"Egg White Scramble + Toast",macros:{kcal:420,p:53,c:22,f:15},ings:[["Brown eggs","3 eggs 165g"],["Liquid egg whites","180g"],["L'Oven Protein Bread","2 slices 80g"],["Cucumber","100g"],["Cherry tomatoes","90g"]],tip:"Upper body day. Keep breakfast clean."},
-      {icon:"&#x1F957;",time:"Lunch 12:30 PM",name:"Chicken and Avocado Salad",macros:{kcal:440,p:47,c:14,f:19},ings:[["Chicken breast grilled","200g"],["Iceberg lettuce","80g"],["Cucumber","100g"],["Cherry tomatoes","120g"],["Avocado","75g"],["Parmesan blend","10g"],["Lime juice","30g"]],tip:"High fat and protein keeps energy steady."},
-      {icon:"&#x1FAD0;",time:"Snack 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},ings:[["Garden of Life Vanilla Chai","1 scoop 38g"],["Frozen blueberries","75g"],["Frozen strawberries","75g"],["1% milk","120g"],["Water","120g"]],tip:"Sweet fix handled."},
-      {icon:"&#x1F954;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Red Potatoes",macros:{kcal:380,p:33,c:26,f:14},ings:[["Chicken thighs cooked","170g"],["Red potatoes","115g"],["Bell pepper","75g"],["Onion","40g"],["Lime juice","15g"],["Garlic powder salt pepper","to taste"]],tip:"Keep it clean. Friday is high-carb."}
+    thu:{name:"Thu",date:"Apr 10",type:"low",label:"Low Carb",desc:"Upper Day",macros:{cal:1470,pro:161,carb:95,fat:52},meals:[
+      {icon:"&#x1F373;",time:"Breakfast 8:00 AM",name:"Egg White Scramble + Protein Toast",macros:{kcal:420,p:53,c:22,f:15},
+       ings:[["Brown eggs whole","3 eggs 165g"],["Liquid egg whites","180g"],["L'Oven Protein Bread toasted","2 slices 80g"],["Mini cucumber side","100g"],["Cherry tomatoes side","90g"]],
+       tip:"Upper body day. Moderate fuel needed. Keep breakfast clean and high protein."},
+      {icon:"&#x1F957;",time:"Lunch 12:30 PM",name:"Chicken and Avocado Salad",macros:{kcal:440,p:47,c:14,f:19},
+       ings:[["Chicken breast grilled","200g"],["Iceberg lettuce","80g"],["Mini cucumber","100g"],["Cherry tomatoes","120g"],["Avocado","75g"],["Shaved parmesan blend","10g"],["Lime juice","30g"]],
+       tip:"Same as Tuesday. High fat and protein keeps energy steady for the afternoon."},
+      {icon:"&#x1FAD0;",time:"Snack 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},
+       ings:[["Garden of Life Vanilla Chai","1 scoop 38g"],["Frozen blueberries","75g"],["Frozen strawberries","75g"],["1% milk","120g"],["Water","120g"]],
+       tip:"Sweet fix handled. Tomorrow is a high carb day so finish today clean."},
+      {icon:"&#x1F954;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Red Potatoes",macros:{kcal:380,p:33,c:26,f:14},
+       ings:[["Chicken thighs cooked","170g"],["Red potatoes","115g"],["Bell pepper","75g"],["Onion","40g"],["Lime juice","15g"],["Garlic powder salt pepper","to taste"]],
+       tip:"Keep it clean. Tomorrow is lower split plus soccer. High carb day incoming."}
     ]},
-    fri:{name:"Fri",date:"Apr 4",type:"high",label:"High Carb",desc:"Lower Day + Soccer",macros:{cal:1930,pro:158,carb:210,fat:40},meals:[
-      {icon:"&#x26A1;",time:"Pre-Gym 6:30 AM",name:"Pre-Workout Fuel",macros:{kcal:220,p:10,c:38,f:3},ings:[["Banana","120g"],["L'Oven Protein Bread","1 slice 40g"],["PB2","12g"],["Honey","3g"]],tip:"Double training day. Gym plus soccer. Fuel up."},
-      {icon:"&#x1F95E;",time:"Post-Gym 8:30 AM",name:"Kodiak Power Cakes",macros:{kcal:520,p:50,c:78,f:6},ings:[["Kodiak Power Cakes mix","85g"],["Liquid egg whites","120g"],["Frozen berries","80g"],["Honey","7g"],["Cinnamon","1g"]],tip:"Biggest carb meal. Soccer later too."},
-      {icon:"&#x1F357;",time:"Lunch 12:30 PM",name:"Chicken and Rice Bowl",macros:{kcal:490,p:46,c:60,f:11},ings:[["Chicken breast cooked","170g"],["White rice cooked","186g"],["Bell pepper","75g"],["Onion","40g"],["Mexican cheese blend","15g"],["Lime juice","15g"]],tip:"Eat at least 2 hours before soccer."},
-      {icon:"&#x26BD;",time:"Pre-Soccer 4:30 PM",name:"Hero Bagel + PB2",macros:{kcal:200,p:11,c:28,f:3},ings:[["Hero Everything Bagel","57g"],["PB2","8g"],["Honey","3g"]],tip:"Light pre-soccer fuel. Do not eat too much before playing."},
-      {icon:"&#x1F360;",time:"Post-Soccer Dinner 7:30 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:500,p:41,c:42,f:17},ings:[["Chicken thighs cooked","170g"],["Sweet potato","150g"],["Honey","7g"],["Cinnamon","1g"],["Side salad","120g"],["Lime juice","15g"]],tip:"Replenish after double session. Earn this meal."}
+    fri:{name:"Fri",date:"Apr 11",type:"high",label:"High Carb",desc:"Lower Day + Soccer",macros:{cal:1930,pro:158,carb:210,fat:40},meals:[
+      {icon:"&#x26A1;",time:"Pre-Gym 6:30 AM",name:"Pre-Workout Fuel",macros:{kcal:220,p:10,c:38,f:3},
+       ings:[["Banana","120g"],["L'Oven Protein Bread","1 slice 40g"],["PB2","12g"],["Honey","3g"]],
+       tip:"Double training day — gym plus soccer. You need both the pre-gym fuel and the post-soccer dinner. Do not skip either."},
+      {icon:"&#x1F95E;",time:"Post-Gym 8:30 AM",name:"Kodiak Power Cakes",macros:{kcal:520,p:50,c:78,f:6},
+       ings:[["Kodiak Power Cakes mix","85g dry"],["Liquid egg whites in batter","120g"],["Frozen berries warmed as syrup","80g"],["Honey","7g"],["Ground cinnamon","1g"]],
+       tip:"Biggest carb meal of the day. You have soccer later so you need this fuel in the tank."},
+      {icon:"&#x1F357;",time:"Lunch 12:30 PM",name:"Chicken and Rice Bowl",macros:{kcal:490,p:46,c:60,f:11},
+       ings:[["Chicken breast cooked","170g"],["White rice cooked","186g"],["Bell pepper","75g"],["Onion","40g"],["Mexican cheese blend","15g"],["Lime juice","15g"]],
+       tip:"Eat this at least 2 hours before soccer. Do not eat a full meal right before playing."},
+      {icon:"&#x26BD;",time:"Pre-Soccer Snack 4:30 PM",name:"Hero Bagel + PB2 Spread",macros:{kcal:200,p:11,c:28,f:3},
+       ings:[["Hero Everything Bagel","57g"],["PB2 Powdered Peanut Butter","8g"],["Honey","3g"]],
+       tip:"Light pre-soccer fuel. Mix PB2 + honey + a little water into a spread. Enough to keep energy up without cramping on the field."},
+      {icon:"&#x1F360;",time:"Post-Soccer Dinner 7:30 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:500,p:41,c:42,f:17},
+       ings:[["Chicken thighs cooked","170g"],["Sweet potato","150g"],["Honey","7g"],["Ground cinnamon","1g"],["Side salad","120g"],["Lime juice","15g"]],
+       tip:"Replenish after gym plus soccer. You earned this meal. Cinnamon and honey on the sweet potato makes it taste like dessert."}
     ]},
-    sat:{name:"Sat",date:"Apr 5",type:"low",label:"Low Carb",desc:"Rest Day",macros:{cal:1470,pro:161,carb:95,fat:52},meals:[
-      {icon:"&#x1F373;",time:"Breakfast 9:30 AM",name:"Egg White Scramble + Toast",macros:{kcal:420,p:53,c:22,f:15},ings:[["Brown eggs","3 eggs 165g"],["Liquid egg whites","180g"],["L'Oven Protein Bread","2 slices 80g"],["Cucumber","100g"],["Cherry tomatoes","90g"]],tip:"Rest day. Keep it clean."},
-      {icon:"&#x1F957;",time:"Lunch 1:00 PM",name:"Chicken and Avocado Salad",macros:{kcal:440,p:47,c:14,f:19},ings:[["Chicken breast grilled","200g"],["Iceberg lettuce","80g"],["Cucumber","100g"],["Cherry tomatoes","120g"],["Avocado","75g"],["Parmesan blend","10g"],["Lime juice","30g"]],tip:"Big bowl. Satisfying on rest days."},
-      {icon:"&#x1FAD0;",time:"Snack 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},ings:[["Garden of Life Vanilla Chai","1 scoop 38g"],["Frozen blueberries","75g"],["Frozen strawberries","75g"],["1% milk","120g"],["Water","120g"]],tip:"Sweet fix for the day."},
-      {icon:"&#x1F954;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Red Potatoes",macros:{kcal:380,p:33,c:26,f:14},ings:[["Chicken thighs cooked","170g"],["Red potatoes","115g"],["Bell pepper","75g"],["Onion","40g"],["Lime juice","15g"],["Garlic powder salt pepper","to taste"]],tip:"Stay on plan. Sunday is Korean BBQ."}
+    sat:{name:"Sat",date:"Apr 12",type:"low",label:"Low Carb",desc:"Rest Day — Home",macros:{cal:1469,pro:161,carb:84,fat:58},meals:[
+      {icon:"&#x1F373;",time:"Breakfast 9:00 AM",name:"Egg White Scramble + Protein Toast",macros:{kcal:420,p:53,c:22,f:15},
+       ings:[["Brown eggs whole","3 eggs 165g"],["Liquid egg whites","180g"],["L'Oven Protein Bread toasted","2 slices 80g"],["Mini cucumber side","100g"],["Cherry tomatoes side","90g"]],
+       tip:"Rest day at home. Start clean. Same breakfast as your low carb weekdays."},
+      {icon:"&#x1F957;",time:"Lunch 1:00 PM",name:"Chicken Thighs + Big Avocado Salad",macros:{kcal:426,p:40,c:12,f:25},
+       ings:[["Chicken thighs cooked","150g"],["Iceberg lettuce","80g"],["Mini cucumber","100g"],["Cherry tomatoes","90g"],["Avocado","75g"],["Shaved parmesan blend","10g"],["Lime juice","30g"],["Salt and pepper","to taste"]],
+       tip:"Avocado is your fat source today instead of rice. No rice on rest day weekends. Make this salad big — volume keeps you full and satisfied all afternoon."},
+      {icon:"&#x1FAD0;",time:"Snack 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},
+       ings:[["Garden of Life Vanilla Chai","1 scoop 38g"],["Frozen blueberries","75g"],["Frozen strawberries","75g"],["1% milk","120g"],["Water","120g"]],
+       tip:"Your sweet tooth fix for the day. Cold and blended. You are at home so use the blender if you have one for the best result."},
+      {icon:"&#x1F354;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Small Red Potatoes",macros:{kcal:393,p:40,c:17,f:14},
+       ings:[["Chicken thighs cooked","150g"],["Red potatoes roasted","100g"],["Bell pepper","75g"],["Onion","40g"],["Lime juice","15g"],["Garlic powder salt pepper","to taste"]],
+       tip:"Smaller potato portion than weekdays since this is a rest day. Season chicken thighs well and roast or pan-cook. Potatoes at 220C for 20 min. This completes a clean low carb rest day."}
     ]},
-    sun:{name:"Sun",date:"Apr 6",type:"low",label:"Korean BBQ",desc:"Hike + Eat Out",macros:{cal:2200,pro:140,carb:200,fat:70},special:true,meals:[
-      {icon:"&#x1F34C;",time:"Morning 8:00 AM",name:"Light Breakfast",macros:{kcal:200,p:10,c:35,f:3},ings:[["Banana","120g"],["L'Oven Protein Bread","1 slice 40g"]],tip:"Keep it light. Preserve appetite for Korean BBQ."},
-      {icon:"&#x1F969;",time:"Korean BBQ Afternoon",name:"Korean BBQ Enjoy It",macros:{kcal:2000,p:130,c:165,f:67},ings:[["Bulgogi beef","200g"],["Pork belly limited","100g"],["Grilled chicken","150g"],["Steamed rice","150g 1 serving"],["Banchan sides","enjoy freely"]],tip:"Bulgogi and grilled chicken first. One serving of rice. Skip sugary sauces. This is your planned free day."}
+    sun:{name:"Sun",date:"Apr 13",type:"low",label:"Low Carb",desc:"Rest Day — Home",macros:{cal:1513,pro:180,carb:91,fat:51},meals:[
+      {icon:"&#x1F373;",time:"Breakfast 9:00 AM",name:"Egg White Scramble + Protein Toast",macros:{kcal:420,p:53,c:22,f:15},
+       ings:[["Brown eggs whole","3 eggs 165g"],["Liquid egg whites","180g"],["L'Oven Protein Bread toasted","2 slices 80g"],["Mini cucumber side","100g"],["Cherry tomatoes side","90g"]],
+       tip:"Second rest day. Keep the same clean start. Consistency on weekends is what separates average results from great ones."},
+      {icon:"&#x1F357;",time:"Lunch 1:00 PM",name:"Chicken Breast + Avocado Salad",macros:{kcal:452,p:59,c:11,f:18},
+       ings:[["Chicken breast grilled","180g"],["Iceberg lettuce","80g"],["Mini cucumber","100g"],["Cherry tomatoes","90g"],["Avocado","75g"],["Shaved parmesan blend","10g"],["Lime juice","30g"]],
+       tip:"Switching to chicken breast for Sunday adds more protein and less fat compared to thighs. Grilled or pan-cooked with salt and garlic powder. Simple and clean."},
+      {icon:"&#x1FAD0;",time:"Snack 4:00 PM",name:"Protein Berry Shake",macros:{kcal:230,p:28,c:33,f:4},
+       ings:[["Garden of Life Vanilla Chai","1 scoop 38g"],["Frozen blueberries","75g"],["Frozen strawberries","75g"],["1% milk","120g"],["Water","120g"]],
+       tip:"Same as Saturday. Blend cold."},
+      {icon:"&#x1F360;",time:"Dinner 7:00 PM",name:"Chicken Thighs + Sweet Potato",macros:{kcal:411,p:40,c:31,f:14},
+       ings:[["Chicken thighs cooked","150g"],["Sweet potato","130g"],["Honey","7g"],["Ground cinnamon","1g"],["Side salad","100g"],["Lime juice","15g"]],
+       tip:"Sweet potato with cinnamon and honey is your Sunday treat — it tastes like dessert and gives you just enough carbs to recover before the new week starts Monday. You are back on high carb tomorrow so finish Sunday clean."}
     ]}
   }};
 
   // ============================================================
-  // MANNY DATA
+  // MANNY — Home Cooked | Week of Apr 7 | Stater Bros
+  // Chicken Breast Mon Thu | Thighs Tue | Sirloin Wed | NY Strip Fri
   // ============================================================
   var MANNY = {days:{
-    mon:{name:"Mon",date:"Mar 31",type:"mod",label:"Training Day",desc:"Push Day - 1,800 cal",macros:{cal:1775,pro:183,carb:176,fat:37},meals:[
-      {icon:"&#x1F963;",time:"Breakfast At Home",name:"Oatmeal + Banana + Whey Shake",macros:{kcal:525,p:35,c:84,f:7},ings:[["Old-fashioned oats cooked with water","80g dry"],["Banana","120g"],["Chocolate whey protein + water","1 scoop 30g"]],tip:"5 min total. Cook oats with water only. Mix shake in a shaker bottle."},
-      {icon:"&#x1F32F;",time:"Lunch Chipotle",name:"Double Chicken Bowl",macros:{kcal:645,p:75,c:52,f:18},ings:[["Chicken double portion","225g"],["White rice half serving","130g"],["Black beans","115g"],["Fajita veggies","85g"],["Fresh tomato salsa","85g"],["Romaine lettuce","20g"]],tip:"Order: double chicken, half rice, black beans, fajita veggies, tomato salsa, lettuce. No cheese. No sour cream."},
-      {icon:"&#x1F353;",time:"Evening Home",name:"Protein Yogurt Bowl + Berries",macros:{kcal:415,p:67,c:32,f:5},ings:[["Oikos Pro Vanilla Yogurt","1 container 150g"],["Fresh blueberries","80g"],["Fresh strawberries sliced","80g"],["Honey drizzle","5g"],["Fairlife Chocolate Shake","1 bottle 150 cal 30g protein"]],tip:"30 seconds zero cooking. Open yogurt, add berries, drizzle honey, shake on the side."},
-      {icon:"&#x1F36B;",time:"Late Snack if hungry",name:"Quest Bar",macros:{kcal:190,p:21,c:22,f:9},ings:[["Quest Bar any flavor","1 bar 60g"]],tip:"Only if still under your calorie target."}
+    mon:{name:"Mon",date:"Apr 7",type:"mod",label:"Chicken Breast",desc:"Push Day — 1,745 cal",macros:{cal:1745,pro:206,carb:136,fat:44},meals:[
+      {icon:"&#x1F373;",time:"Breakfast",name:"Scrambled Eggs + Whey Shake",macros:{kcal:378,p:42,c:5,f:20},
+       ings:[["Brown eggs","3 whole eggs"],["Whey protein powder chocolate","1 scoop with water 30g"],["Salt and pepper","to taste"],["Oil or butter","small amount for pan"]],
+       tip:"Crack 3 eggs into a pan on medium heat. Stir slowly until just set. Mix the whey shake in a shaker bottle or glass separately. This is your quickest breakfast — under 5 minutes."},
+      {icon:"&#x1F357;",time:"Lunch",name:"Chicken Breast + White Rice",macros:{kcal:538,p:61,c:52,f:7},
+       ings:[["Chicken breast","180g raw — about 1 medium breast"],["White rice cooked","185g cooked — from about 75g dry"],["Garlic powder","generous pinch on both sides"],["Cumin","pinch"],["Salt","to taste"],["Oil","1 tsp in pan"]],
+       tip:"Season both sides of chicken. Heat oil in pan on medium-high. Cook 6-7 min per side until no pink inside. For rice: 75g dry rice plus 150ml water. Bring to boil, cover, reduce to low, cook 18 min. Do not lift the lid. Fluff with fork after."},
+      {icon:"&#x1F357;",time:"Dinner",name:"Chicken Breast + White Rice",macros:{kcal:489,p:52,c:52,f:6},
+       ings:[["Chicken breast","150g raw"],["White rice cooked","185g cooked — from about 75g dry"],["Garlic powder cumin salt","same as lunch"],["Oil","1 tsp"]],
+       tip:"Same as lunch. If you cooked extra chicken at lunch just reheat it. Prep both servings at once to save time — cook 330g of chicken total at lunch and refrigerate the dinner portion."},
+      {icon:"&#x1F36B;",time:"Evening Snack",name:"Fairlife Shake + Quest Bar",macros:{kcal:340,p:51,c:27,f:11},
+       ings:[["Fairlife Nutrition Plan Chocolate Shake","1 bottle — 150 cal 30g protein"],["Quest Bar any flavor","1 bar — 190 cal 21g protein"]],
+       tip:"Grab both from the fridge. Zero prep. This fills the protein gap and handles the sweet tooth at the end of the day."}
     ]},
-    tue:{name:"Tue",date:"Apr 1",type:"mod",label:"Training Day",desc:"Pull Day - 1,800 cal",macros:{cal:1720,pro:185,carb:155,fat:33},meals:[
-      {icon:"&#x1F964;",time:"Breakfast At Home",name:"Whey Shake + Banana",macros:{kcal:225,p:25,c:30,f:2},ings:[["Chocolate whey protein + water","1 scoop 30g"],["Banana","120g"]],tip:"Lighter morning. Pull day does not need as much fuel."},
-      {icon:"&#x1F41F;",time:"Lunch Poke",name:"Ahi Tuna Poke Bowl 3 Scoops",macros:{kcal:565,p:51,c:74,f:10},ings:[["Ahi tuna ask for 3 scoops","170g"],["White rice base","225g"],["Edamame","50g"],["Cucumber","unlimited"],["Seaweed salad","30g"],["Ponzu or light shoyu","1 pump"]],tip:"Ask for 3 scoops of tuna. Skip spicy mayo. Ponzu is your best sauce."},
-      {icon:"&#x1F353;",time:"Evening Home",name:"Protein Yogurt Bowl + 2x Shake",macros:{kcal:480,p:68,c:36,f:5},ings:[["Oikos Pro Vanilla Yogurt","1 container 150g"],["Fresh blueberries","80g"],["Fresh strawberries sliced","80g"],["Honey drizzle","5g"],["Fairlife Chocolate Shake","2 bottles 300 cal 60g protein"]],tip:"Poke is lower protein than Chipotle so stack protein tonight."}
+    tue:{name:"Tue",date:"Apr 8",type:"mod",label:"Chicken Thighs",desc:"Pull Day — 1,822 cal",macros:{cal:1822,pro:195,carb:126,fat:66},meals:[
+      {icon:"&#x1F373;",time:"Breakfast",name:"Scrambled Eggs + Whey Shake",macros:{kcal:378,p:42,c:5,f:20},
+       ings:[["Brown eggs","3 whole eggs"],["Whey protein powder chocolate","1 scoop with water"],["Salt and pepper","to taste"]],
+       tip:"Same breakfast every day keeps it simple. 3 eggs plus a shake takes less than 5 minutes."},
+      {icon:"&#x1F357;",time:"Lunch",name:"Chicken Thighs + White Rice",macros:{kcal:609,p:55,c:52,f:19},
+       ings:[["Boneless skinless chicken thighs","200g raw"],["White rice cooked","185g cooked"],["Garlic powder","generous on both sides"],["Paprika","pinch for color"],["Salt","to taste"],["Oil","1 tsp"]],
+       tip:"Thighs are juicier and harder to mess up than breasts. Season well. Cook on medium heat 7-8 min per side. They will release their own fat — the pan will sizzle nicely. Same rice method as Monday."},
+      {icon:"&#x1F357;",time:"Dinner",name:"Chicken Thighs + White Rice",macros:{kcal:495,p:47,c:42,f:16},
+       ings:[["Boneless skinless chicken thighs","170g raw"],["White rice cooked","150g cooked — from about 60g dry"],["Seasoning","same as lunch"]],
+       tip:"Thighs have more fat than breasts so the dinner portion is slightly smaller to keep calories on target. Reheat if you prepped at lunch."},
+      {icon:"&#x1F36B;",time:"Evening Snack",name:"Fairlife Shake + Quest Bar",macros:{kcal:340,p:51,c:27,f:11},
+       ings:[["Fairlife Nutrition Plan Chocolate Shake","1 bottle"],["Quest Bar any flavor","1 bar"]],
+       tip:"Same as Monday. Consistent evening snack makes tracking easy."}
     ]},
-    wed:{name:"Wed",date:"Apr 2",type:"mod",label:"Training Day",desc:"Leg Day - 1,800 cal",macros:{cal:1790,pro:182,carb:190,fat:36},meals:[
-      {icon:"&#x1F963;",time:"Breakfast At Home",name:"Oatmeal + Banana + Whey Shake",macros:{kcal:525,p:35,c:84,f:7},ings:[["Old-fashioned oats cooked with water","80g dry"],["Banana","120g"],["Chocolate whey protein + water","1 scoop 30g"]],tip:"Leg day. Do not skip carbs this morning."},
-      {icon:"&#x1F32F;",time:"Lunch Chipotle",name:"Chicken + Steak Bowl",macros:{kcal:615,p:64,c:53,f:17},ings:[["Chicken single","115g"],["Steak single","115g"],["White rice half serving","130g"],["Black beans","115g"],["Fajita veggies","85g"],["Fresh tomato salsa","85g"],["Romaine lettuce","20g"]],tip:"Variety day. Chicken plus steak. Same no-cheese no-sour-cream rule."},
-      {icon:"&#x1F366;",time:"Evening Home",name:"Protein Yogurt Bowl + Halo Top",macros:{kcal:420,p:43,c:53,f:5},ings:[["Oikos Pro Vanilla Yogurt","1 container 150g"],["Fresh blueberries","80g"],["Fresh strawberries sliced","80g"],["Honey drizzle","5g"],["Fairlife Chocolate Shake","1 bottle 150 cal 30g protein"],["Halo Top Chocolate Ice Cream","1 serving 2/3 cup 100 cal"]],tip:"Wednesday treat night after leg day. Halo Top full pint is only 300 cal."}
+    wed:{name:"Wed",date:"Apr 9",type:"mod",label:"Sirloin Steak",desc:"Leg Day — 1,878 cal",macros:{cal:1878,pro:200,carb:126,fat:68},meals:[
+      {icon:"&#x1F373;",time:"Breakfast",name:"Scrambled Eggs + Whey Shake",macros:{kcal:378,p:42,c:5,f:20},
+       ings:[["Brown eggs","3 whole eggs"],["Whey protein powder chocolate","1 scoop with water"],["Salt and pepper","to taste"]],
+       tip:"Leg day needs good carb fuel later. Start with clean protein. Keep breakfast simple so you can focus energy on the workout."},
+      {icon:"&#x1F969;",time:"Lunch",name:"Sirloin Steak + White Rice",macros:{kcal:655,p:61,c:52,f:21},
+       ings:[["Sirloin steak","200g raw"],["White rice cooked","185g cooked"],["Salt","generous on both sides — only seasoning you need"],["Garlic powder","optional pinch"],["Oil","just a touch — steak releases its own fat"]],
+       tip:"Steak Wednesday is your best meal of the week. Heat pan on HIGH — this is important. Season steak with salt. Add a tiny bit of oil. Cook 3-4 min per side for medium. Let it rest 3 min before cutting — this keeps the juices inside. Same rice method."},
+      {icon:"&#x1F969;",time:"Dinner",name:"Sirloin Steak + White Rice",macros:{kcal:506,p:46,c:42,f:15},
+       ings:[["Sirloin steak","150g raw"],["White rice cooked","150g cooked — from about 60g dry"],["Salt","to taste"]],
+       tip:"Smaller steak portion at dinner. Cook the same way — high heat fast sear. If you cook both steaks at lunch and refrigerate the dinner one, reheat in the pan 2 min per side on medium."},
+      {icon:"&#x1F36B;",time:"Evening Snack",name:"Fairlife Shake + Quest Bar",macros:{kcal:340,p:51,c:27,f:11},
+       ings:[["Fairlife Nutrition Plan Chocolate Shake","1 bottle"],["Quest Bar any flavor","1 bar"]],
+       tip:"Same every night. Makes hitting protein targets automatic."}
     ]},
-    thu:{name:"Thu",date:"Apr 3",type:"mod",label:"Training Day",desc:"Upper Day - 1,800 cal",macros:{cal:1680,pro:182,carb:158,fat:30},meals:[
-      {icon:"&#x1F964;",time:"Breakfast At Home",name:"Whey Shake + Banana",macros:{kcal:225,p:25,c:30,f:2},ings:[["Chocolate whey protein + water","1 scoop 30g"],["Banana","120g"]],tip:"Upper body. Lighter fuel."},
-      {icon:"&#x1F32F;",time:"Lunch Chipotle",name:"Double Chicken Bowl",macros:{kcal:645,p:75,c:52,f:18},ings:[["Chicken double portion","225g"],["White rice half serving","130g"],["Black beans","115g"],["Fajita veggies","85g"],["Fresh tomato salsa","85g"],["Romaine lettuce","20g"]],tip:"Thursday Chipotle. Most efficient protein lunch."},
-      {icon:"&#x1F353;",time:"Evening Home",name:"Protein Yogurt Bowl + 2x Shake",macros:{kcal:630,p:82,c:46,f:6},ings:[["Oikos Pro Vanilla Yogurt","1 container 150g"],["Fresh blueberries","80g"],["Fresh strawberries sliced","80g"],["Honey drizzle","5g"],["Fairlife Chocolate Shake","2 bottles 300 cal 60g protein"]],tip:"Lighter breakfast means more protein in the evening."}
+    thu:{name:"Thu",date:"Apr 10",type:"mod",label:"Chicken Breast",desc:"Upper Day — 1,745 cal",macros:{cal:1745,pro:206,carb:136,fat:44},meals:[
+      {icon:"&#x1F373;",time:"Breakfast",name:"Scrambled Eggs + Whey Shake",macros:{kcal:378,p:42,c:5,f:20},
+       ings:[["Brown eggs","3 whole eggs"],["Whey protein powder chocolate","1 scoop with water"],["Salt and pepper","to taste"]],
+       tip:"Same breakfast. Consistent and fast."},
+      {icon:"&#x1F357;",time:"Lunch",name:"Chicken Breast + White Rice",macros:{kcal:538,p:61,c:52,f:7},
+       ings:[["Chicken breast","180g raw"],["White rice cooked","185g cooked"],["Garlic powder cumin salt","to taste"],["Oil","1 tsp"]],
+       tip:"Back to chicken breast Thursday. If you are getting tired of the plain seasoning try adding a squeeze of lemon or a drizzle of hot sauce — zero calories and totally changes the flavor."},
+      {icon:"&#x1F357;",time:"Dinner",name:"Chicken Breast + White Rice",macros:{kcal:489,p:52,c:52,f:6},
+       ings:[["Chicken breast","150g raw"],["White rice cooked","185g cooked"],["Garlic powder cumin salt","to taste"],["Oil","1 tsp"]],
+       tip:"Cook both lunch and dinner chicken at once to save time. Season all of it together and refrigerate the dinner portion."},
+      {icon:"&#x1F36B;",time:"Evening Snack",name:"Fairlife Shake + Quest Bar",macros:{kcal:340,p:51,c:27,f:11},
+       ings:[["Fairlife Nutrition Plan Chocolate Shake","1 bottle"],["Quest Bar any flavor","1 bar"]],
+       tip:"Protein gap filled. Sweet tooth handled. Done."}
     ]},
-    fri:{name:"Fri",date:"Apr 4",type:"mod",label:"Training + Soccer",desc:"Lower Day + Soccer - 1,800 cal",macros:{cal:1790,pro:181,carb:183,fat:36},meals:[
-      {icon:"&#x1F963;",time:"Breakfast At Home",name:"Oatmeal + Banana + Whey Shake",macros:{kcal:525,p:35,c:84,f:7},ings:[["Old-fashioned oats cooked with water","80g dry"],["Banana","120g"],["Chocolate whey protein + water","1 scoop 30g"]],tip:"Double training day. Full breakfast no shortcuts."},
-      {icon:"&#x1F32F;",time:"Lunch Chipotle",name:"Double Chicken Bowl",macros:{kcal:645,p:75,c:52,f:18},ings:[["Chicken double portion","225g"],["White rice half serving","130g"],["Black beans","115g"],["Fajita veggies","85g"],["Fresh tomato salsa","85g"],["Romaine lettuce","20g"]],tip:"Eat by 12:30. Do not eat within 2 hours of soccer."},
-      {icon:"&#x1F353;",time:"Post-Soccer Evening",name:"Protein Yogurt Bowl + 2x Shake",macros:{kcal:480,p:68,c:36,f:5},ings:[["Oikos Pro Vanilla Yogurt","1 container 150g"],["Fresh blueberries","80g"],["Fresh strawberries sliced","80g"],["Honey drizzle","5g"],["Fairlife Chocolate Shake","2 bottles 300 cal 60g protein"]],tip:"Protein in within 1-2 hours post-soccer."},
-      {icon:"&#x1F36B;",time:"Late Snack optional",name:"Quest Bar",macros:{kcal:190,p:21,c:22,f:9},ings:[["Quest Bar any flavor","1 bar 60g"]],tip:"Only if still under 1800 cal."}
+    fri:{name:"Fri",date:"Apr 11",type:"mod",label:"NY Strip Steak",desc:"Lower Day + Soccer — 1,878 cal",macros:{cal:1878,pro:200,carb:126,fat:68},meals:[
+      {icon:"&#x1F373;",time:"Breakfast",name:"Scrambled Eggs + Whey Shake",macros:{kcal:378,p:42,c:5,f:20},
+       ings:[["Brown eggs","3 whole eggs"],["Whey protein powder chocolate","1 scoop with water"],["Salt and pepper","to taste"]],
+       tip:"Double training day. Full breakfast. Same as every morning — simple and reliable."},
+      {icon:"&#x1F969;",time:"Lunch",name:"NY Strip Steak + White Rice",macros:{kcal:655,p:61,c:52,f:21},
+       ings:[["New York Strip steak","200g raw"],["White rice cooked","185g cooked"],["Salt","generous on both sides"],["Oil","tiny amount for pan"]],
+       tip:"NY strip is slightly more marbled than sirloin — a little more flavor. Same high-heat method. 3-4 min per side. Rest 3 min. Eat at least 2 hours before soccer so you are not sluggish on the field."},
+      {icon:"&#x1F969;",time:"Dinner",name:"NY Strip Steak + White Rice",macros:{kcal:506,p:46,c:42,f:15},
+       ings:[["New York Strip steak","150g raw"],["White rice cooked","150g cooked"],["Salt","to taste"]],
+       tip:"Post-soccer dinner. If you cooked both steaks at lunch refrigerate this one and reheat quickly in the pan. You need protein after playing."},
+      {icon:"&#x1F36B;",time:"Evening Snack",name:"Fairlife Shake + Quest Bar",macros:{kcal:340,p:51,c:27,f:11},
+       ings:[["Fairlife Nutrition Plan Chocolate Shake","1 bottle"],["Quest Bar any flavor","1 bar"]],
+       tip:"End of the work week. Same snack. Stay consistent and Sunday weigh-in will show the results."}
     ]},
-    sat:{name:"Sat",date:"Apr 5",type:"mod",label:"Weekend",desc:"Eat Out 2300 cal",weekend:true,macros:{cal:2300,pro:180,carb:220,fat:70},meals:[]},
-    sun:{name:"Sun",date:"Apr 6",type:"mod",label:"Weekend",desc:"Eat Out 2300 cal",weekend:true,macros:{cal:2300,pro:180,carb:220,fat:70},meals:[]}
+    sat:{name:"Sat",date:"Apr 12",type:"mod",label:"Weekend",desc:"Eat Out — 2,300 cal",weekend:true,macros:{cal:2300,pro:180,carb:220,fat:70},meals:[]},
+    sun:{name:"Sun",date:"Apr 13",type:"mod",label:"Weekend",desc:"Eat Out — 2,300 cal",weekend:true,macros:{cal:2300,pro:180,carb:220,fat:70},meals:[]}
   }};
 
   // ============================================================
-  // ARMANDO DATA
+  // ARMANDO — Low Carb Recomp | Week of Apr 7
   // ============================================================
   var ARMANDO = {days:{
-    mon:{name:"Mon",date:"Apr 7",type:"low",label:"Low Carb",desc:"Work Day 1605 cal",macros:{cal:1605,pro:157,carb:104,fat:58},meals:[
-      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Cold Brew + Protein Cold Foam",macros:{kcal:120,p:5,c:14,f:4},ings:[["Cold Brew grande","0 cal base"],["Protein Salted Caramel Cold Foam","120 cal 5g protein"],["Sugar-free vanilla syrup","2 pumps - no caramel sauce"]],tip:"Swap caramel sauce for sugar-free vanilla. Saves 25g sugar. The foam stays. Important for your insulin sensitivity."},
-      {icon:"&#x1F357;",time:"Meal 1 2:00 PM At Home",name:"Air Fryer Chicken Tenderloins + Eggs + Asparagus",macros:{kcal:695,p:93,c:5,f:30},ings:[["Chicken tenderloins Kirkland frozen","220g - air fry 200C 16 min"],["Liquid egg whites Kirkland carton","100g"],["Brown eggs whole","2 eggs"],["Asparagus","100g - air fry alongside chicken"],["Avocado oil Mariannes","10g - season everything"]],tip:"Toss tenderloins and asparagus in avocado oil, garlic powder, paprika, salt. Air fry together - add asparagus at 8 min mark. Crack 2 eggs in pan while air fryer runs. 20 min total. Take your digestive enzymes with this meal to help with bloating."},
-      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM Taco Bell",name:"Cantina Chicken Bowl Fresco Style",macros:{kcal:440,p:27,c:47,f:14},ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco handles this automatically"],["Extra pico de gallo","free 0 cal"],["Skip chipotle aioli here","save it for home cooking"]],tip:"Best protein option at Taco Bell. Fresco style swaps dairy for pico automatically. Avoid Crunchwrap Chalupa or anything fried."},
-      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"Chobani 20g Yogurt + RXBAR",macros:{kcal:350,p:32,c:38,f:10},ings:[["Chobani 20g Protein Yogurt already in your fridge","1 container 140 cal 20g protein"],["RXBAR you have them","1 bar 210 cal 12g protein"]],tip:"You already have both of these. Zero prep. 32g protein and sweet fix handled. Eat the RXBAR first then the yogurt."}
+    mon:{name:"Mon",date:"Apr 7",type:"low",label:"Low Carb",desc:"Work Day — 1,605 cal",macros:{cal:1605,pro:157,carb:104,fat:58},meals:[
+      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Cold Brew + Protein Cold Foam",macros:{kcal:120,p:5,c:14,f:4},
+       ings:[["Cold Brew grande","0 cal base"],["Protein Salted Caramel Cold Foam","120 cal 5g protein"],["Sugar-free vanilla syrup","2 pumps — no caramel sauce"]],
+       tip:"Swap caramel sauce for sugar-free vanilla. Saves 25g sugar. The foam stays. Take your digestive enzymes now if you have them — helps manage bloating throughout the day."},
+      {icon:"&#x1F357;",time:"Meal 1 2:00 PM",name:"Air Fryer Tenderloins + Eggs + Asparagus",macros:{kcal:695,p:93,c:5,f:30},
+       ings:[["Chicken tenderloins Kirkland frozen","220g"],["Liquid egg whites Kirkland","100g"],["Brown eggs whole","2 eggs"],["Asparagus","100g"],["Avocado oil","10g"]],
+       tip:"Season tenderloins and asparagus with avocado oil, garlic powder, paprika, salt. Air fry together at 200C — tenderloins 16 min, add asparagus at the 8 min mark. Crack 2 eggs in a pan while air fryer runs. 20 min total."},
+      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM — Taco Bell",name:"Cantina Chicken Bowl Fresco",macros:{kcal:440,p:27,c:47,f:14},
+       ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco handles this automatically"],["Extra pico de gallo","free 0 cal"]],
+       tip:"Best protein option at Taco Bell. Fresco style swaps dairy for pico automatically. Avoid anything fried or with creamy sauce."},
+      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"Chobani 20g Yogurt + RXBAR",macros:{kcal:350,p:32,c:38,f:10},
+       ings:[["Chobani 20g Protein Yogurt","1 container 140 cal 20g protein"],["RXBAR","1 bar 210 cal 12g protein"]],
+       tip:"You already have both. Zero prep. 32g protein and sweet fix handled. Eat the RXBAR first then the yogurt."}
     ]},
-    tue:{name:"Tue",date:"Apr 8",type:"low",label:"Low Carb",desc:"Work Day 1668 cal",macros:{cal:1668,pro:160,carb:109,fat:68},meals:[
-      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Iced Americano Starbucks",macros:{kcal:15,p:1,c:2,f:0},ings:[["Iced Americano grande","15 cal - espresso water ice"],["Sugar-free syrup optional","hazelnut or vanilla 0 cal"]],tip:"Americano is the cleanest Starbucks drink for insulin. You already drink black coffee - this is the Starbucks version. Zero sugar zero spike."},
-      {icon:"&#x1F969;",time:"Meal 1 2:30 PM At Home",name:"Imperial Wagyu Ground Beef + Egg Whites + Asparagus",macros:{kcal:703,p:76,c:4,f:42},ings:[["Imperial Wagyu Ground Beef","200g - cook in pan no oil needed"],["Liquid egg whites Kirkland","150g - scramble in same pan after beef"],["Asparagus","100g - air fry or saute"],["Avocado oil","5g for asparagus only"],["Garlic powder + salt","to taste"],["Chipotle aioli optional","1 tsp as sauce 30 cal"]],tip:"Wagyu is so fatty it cooks in its own fat - no oil needed in the pan. Break it up on high heat 8 min. Scramble egg whites in the same pan after beef is done. The wagyu fat flavors everything. A tiny bit of chipotle aioli as a sauce makes this taste incredible."},
-      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM Taco Bell",name:"Cantina Chicken Bowl Fresco",macros:{kcal:440,p:27,c:47,f:14},ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco order"],["Extra salsa","free 0 cal"]],tip:"Consistent Tuesday order."},
-      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"MRE Lite Shake + Chobani + RXBAR",macros:{kcal:510,p:56,c:56,f:12},ings:[["Redcon1 MRE Lite 1 scoop in Oatly oat milk","190 cal 24g protein whole food protein"],["Chobani 20g Protein Yogurt","1 container 140 cal 20g protein"],["RXBAR","1 bar 210 cal 12g protein"]],tip:"Wagyu is lower in protein per calorie than chicken so stack protein tonight. MRE Lite mixed with Oatly tastes way better than water. Three items zero cooking."}
+    tue:{name:"Tue",date:"Apr 8",type:"low",label:"Low Carb",desc:"Work Day — 1,668 cal",macros:{cal:1668,pro:160,carb:109,fat:68},meals:[
+      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Iced Americano",macros:{kcal:15,p:1,c:2,f:0},
+       ings:[["Iced Americano grande","15 cal — espresso water ice"],["Sugar-free syrup optional","hazelnut or vanilla 0 cal"]],
+       tip:"Americano is the cleanest Starbucks drink for insulin sensitivity. You already drink black coffee — this is the Starbucks version. Zero sugar zero spike."},
+      {icon:"&#x1F969;",time:"Meal 1 2:30 PM",name:"Wagyu Ground Beef + Egg Whites + Asparagus",macros:{kcal:703,p:76,c:4,f:42},
+       ings:[["Imperial Wagyu Ground Beef","200g"],["Liquid egg whites Kirkland","150g"],["Asparagus","100g"],["Avocado oil","5g for asparagus only"],["Garlic powder salt","to taste"],["Chipotle aioli optional","1 tsp as sauce"]],
+       tip:"Wagyu cooks in its own fat — no oil needed in the beef pan. Break it up on high heat 8 min. Scramble egg whites in the same pan after beef is done. The wagyu fat flavors everything. A tiny bit of chipotle aioli makes this restaurant quality."},
+      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM — Taco Bell",name:"Cantina Chicken Bowl Fresco",macros:{kcal:440,p:27,c:47,f:14},
+       ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco order"],["Extra salsa","free 0 cal"]],
+       tip:"Consistent Tuesday order."},
+      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"MRE Lite + Chobani + RXBAR",macros:{kcal:510,p:56,c:56,f:12},
+       ings:[["Redcon1 MRE Lite 1 scoop in Oatly oat milk","190 cal 24g protein"],["Chobani 20g Protein Yogurt","140 cal 20g protein"],["RXBAR","210 cal 12g protein"]],
+       tip:"Wagyu is lower in protein per calorie than chicken so stack protein tonight. MRE Lite with Oatly tastes way better than water."}
     ]},
-    wed:{name:"Wed",date:"Apr 9",type:"low",label:"Low Carb",desc:"Work Day 1613 cal",macros:{cal:1613,pro:127,carb:107,fat:71},meals:[
-      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Cold Brew + Protein Cold Foam",macros:{kcal:120,p:5,c:14,f:4},ings:[["Cold Brew grande","base"],["Protein Salted Caramel Cold Foam","120 cal 5g protein"],["Sugar-free syrup only","no caramel drizzle"]],tip:"Wednesday foam day. Keeps you satisfied until your main meal."},
-      {icon:"&#x1F357;",time:"Meal 1 2:30 PM At Home",name:"Air Fryer Chicken Wings + Eggs + Broccoli",macros:{kcal:703,p:63,c:8,f:43},ings:[["Chicken wings Kirkland","120g cooked - about 3-4 wings"],["Brown eggs whole","2 eggs"],["Liquid egg whites Kirkland","150g"],["Broccoli","100g - air fry alongside wings"],["Avocado oil","8g"],["Garlic powder + paprika + salt","season wings generously"]],tip:"Wings at 200C for 22 min in air fryer. Flip halfway. They come out crispy with no breading. Add broccoli at the 12 min mark. Wings are higher fat than tenderloins but solid protein. Skip dipping sauce - the seasoning is enough."},
-      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM Taco Bell",name:"Cantina Chicken Bowl Fresco",macros:{kcal:440,p:27,c:47,f:14},ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco order"],["Extra jalapenos","0 cal adds flavor"]],tip:"Wings are lower in protein per calorie so the Cantina Bowl at work keeps protein on track."},
-      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"Chobani Yogurt + RXBAR",macros:{kcal:350,p:32,c:38,f:10},ings:[["Chobani 20g Protein Yogurt","1 container"],["RXBAR","1 bar"]],tip:"Simple sweet fix. If you want something extra 2-3 dark chocolate rice cakes add only 72 cal."}
+    wed:{name:"Wed",date:"Apr 9",type:"low",label:"Low Carb",desc:"Work Day — 1,613 cal",macros:{cal:1613,pro:127,carb:107,fat:71},meals:[
+      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Cold Brew + Protein Cold Foam",macros:{kcal:120,p:5,c:14,f:4},
+       ings:[["Cold Brew grande","base"],["Protein Salted Caramel Cold Foam","120 cal 5g protein"],["Sugar-free syrup only","no caramel drizzle"]],
+       tip:"Wednesday foam day. The protein cold foam keeps you satisfied until your main meal."},
+      {icon:"&#x1F357;",time:"Meal 1 2:30 PM",name:"Air Fryer Chicken Wings + Eggs + Broccoli",macros:{kcal:703,p:63,c:8,f:43},
+       ings:[["Chicken wings Kirkland","120g cooked — about 3-4 wings"],["Brown eggs whole","2 eggs"],["Liquid egg whites Kirkland","150g"],["Broccoli","100g"],["Avocado oil","8g"],["Garlic powder paprika salt","season wings generously"]],
+       tip:"Wings at 200C for 22 min in air fryer. Flip halfway. Crispy with no breading. Add broccoli at the 12 min mark. Wings are higher fat than tenderloins but solid protein."},
+      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM — Taco Bell",name:"Cantina Chicken Bowl Fresco",macros:{kcal:440,p:27,c:47,f:14},
+       ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco order"],["Extra jalapenos","0 cal adds flavor"]],
+       tip:"Wings are lower in protein per calorie so the Cantina Bowl at work keeps protein on track."},
+      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"Chobani Yogurt + RXBAR",macros:{kcal:350,p:32,c:38,f:10},
+       ings:[["Chobani 20g Protein Yogurt","1 container"],["RXBAR","1 bar"]],
+       tip:"Simple sweet fix. If you want something extra 2-3 dark chocolate rice cakes add only 72 cal."}
     ]},
-    thu:{name:"Thu",date:"Apr 10",type:"low",label:"Low Carb",desc:"Work Day 1631 cal",macros:{cal:1631,pro:165,carb:99,fat:65},meals:[
-      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Black Coffee",macros:{kcal:5,p:0,c:1,f:0},ings:[["Black coffee","home brew or Starbucks Americano 0 cal"]],tip:"You already do this. Black coffee plus no food is the best state for insulin sensitivity. Thursday is steak day."},
-      {icon:"&#x1F969;",time:"Meal 1 2:30 PM At Home",name:"NY Strip Steak + Egg Whites + Asparagus",macros:{kcal:746,p:81,c:5,f:42},ings:[["New York Strip Steak","200g - air fry 200C 12-14 min or pan sear"],["Liquid egg whites Kirkland","100g - scramble as a side"],["Brown eggs whole","2 eggs"],["Asparagus","100g"],["Avocado oil","10g"],["Salt + garlic powder","season steak generously"]],tip:"Season both sides of steak with salt, garlic powder, avocado oil. Air fry at 200C for 12 min for medium. Or pan sear 4 min each side on high heat. Let it rest 3 min before cutting. This is your highest quality meal of the week."},
-      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM Taco Bell",name:"2x Grilled Chicken Soft Tacos Fresco",macros:{kcal:340,p:28,c:34,f:10},ings:[["Grilled Chicken Soft Taco x2","fresco style - no sour cream no cheese"],["Extra pico de gallo + lettuce","free"],["Water or Diet Pepsi 1 max","0 cal"]],tip:"Lighter Taco Bell Thursday. The steak was your big meal. Two fresco tacos is plenty."},
-      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"MRE Lite Shake + Chobani + RXBAR",macros:{kcal:540,p:56,c:59,f:13},ings:[["Redcon1 MRE Lite 1 scoop + Oatly oat milk","190 cal 24g protein"],["Chobani 20g Protein Yogurt","1 container 140 cal 20g protein"],["RXBAR","1 bar 210 cal 12g protein"]],tip:"Strong protein finish after steak day. If you want something sweet 2 medjool dates taste incredible at 132 cal. Keep dates to 2 max - they spike insulin but are fine occasionally."}
+    thu:{name:"Thu",date:"Apr 10",type:"low",label:"Low Carb",desc:"Work Day — 1,631 cal",macros:{cal:1631,pro:165,carb:99,fat:65},meals:[
+      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Black Coffee",macros:{kcal:5,p:0,c:1,f:0},
+       ings:[["Black coffee","home brew or Americano at Starbucks 0 cal"]],
+       tip:"You already do this. Black coffee is the best thing for your insulin sensitivity. Thursday is steak day."},
+      {icon:"&#x1F969;",time:"Meal 1 2:30 PM",name:"NY Strip + Egg Whites + Asparagus",macros:{kcal:746,p:81,c:5,f:42},
+       ings:[["New York Strip Steak","200g"],["Liquid egg whites Kirkland","100g"],["Brown eggs whole","2 eggs"],["Asparagus","100g"],["Avocado oil","10g"],["Salt garlic powder","season steak generously"]],
+       tip:"Season both sides of steak. Air fry at 200C for 12 min for medium or pan sear 4 min each side on high heat. Let it rest 3 min before cutting. Scramble egg whites on the side. This is your highest quality meal of the week."},
+      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM — Taco Bell",name:"2x Grilled Chicken Tacos Fresco",macros:{kcal:340,p:28,c:34,f:10},
+       ings:[["Grilled Chicken Soft Taco x2","fresco style — no sour cream no cheese"],["Extra pico de gallo lettuce","free"],["Water or Diet Pepsi 1 max","0 cal"]],
+       tip:"Lighter Thursday at Taco Bell. The steak was the big meal of the day."},
+      {icon:"&#x1F35E;",time:"Evening 12:00 AM",name:"MRE Lite + Chobani + RXBAR",macros:{kcal:540,p:56,c:59,f:13},
+       ings:[["Redcon1 MRE Lite 1 scoop in Oatly","190 cal 24g protein"],["Chobani 20g Protein Yogurt","140 cal 20g protein"],["RXBAR","210 cal 12g protein"]],
+       tip:"Strong protein finish after steak day. If you want something sweet 2 medjool dates at 132 cal taste incredible. Keep dates to 2 max."}
     ]},
-    fri:{name:"Fri",date:"Apr 11",type:"low",label:"Low Carb",desc:"Work Day 1624 cal",macros:{cal:1624,pro:171,carb:122,fat:51},meals:[
-      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Iced Americano + Light Sweet Cream Foam",macros:{kcal:80,p:4,c:8,f:2},ings:[["Iced Americano grande","15 cal"],["Vanilla Sweet Cream Cold Foam light","65 cal 4g protein"],["No caramel drizzle","skip it"]],tip:"End of work week treat. Vanilla sweet cream foam is lighter than protein foam but still feels indulgent."},
-      {icon:"&#x1F357;",time:"Meal 1 2:30 PM At Home",name:"Tenderloins + Wagyu + Egg Whites",macros:{kcal:801,p:101,c:24,f:32},ings:[["Chicken tenderloins Kirkland","150g - air fry 200C 16 min"],["Imperial Wagyu Ground Beef","100g - cook in pan"],["Liquid egg whites Kirkland","100g - add to wagyu pan at the end"],["Tangerines you have them","2 tangerines 94g"],["Avocado oil","8g"],["Garlic powder + cumin + salt","season both proteins"]],tip:"Cook wagyu in pan first 6 min then add egg whites at the end. Air fry tenderloins at the same time. Finish the tangerines after the protein - the fiber slows down the sugar hit. Mix of textures and flavors keeps Friday from feeling boring."},
-      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM Taco Bell",name:"Cantina Chicken Bowl Fresco",macros:{kcal:440,p:27,c:47,f:14},ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco order"],["Extra pico + jalapenos","0 cal"]],tip:"Friday bowl. End of the work week. You stayed on plan all week."},
-      {icon:"&#x1F352;",time:"Evening 12:00 AM",name:"20g Protein Drink + Chobani + Rice Cakes",macros:{kcal:368,p:42,c:49,f:5},ings:[["20g Protein Drink strawberry you have it","1 bottle 120 cal 20g protein"],["Chobani 20g Protein Yogurt","1 container 140 cal 20g protein"],["Dark chocolate rice cakes","3 cakes 108 cal sweet treat"]],tip:"Friday night sweet fix. Dark chocolate rice cakes are your dessert - crunchy chocolatey only 36 cal each. The protein drink tastes like a smoothie. End of the week - you earned this."}
+    fri:{name:"Fri",date:"Apr 11",type:"low",label:"Low Carb",desc:"Work Day — 1,624 cal",macros:{cal:1624,pro:171,carb:122,fat:51},meals:[
+      {icon:"&#x2615;",time:"Wake-up 1:00 PM",name:"Iced Americano + Sweet Cream Foam",macros:{kcal:80,p:4,c:8,f:2},
+       ings:[["Iced Americano grande","15 cal"],["Vanilla Sweet Cream Cold Foam light","65 cal 4g protein"],["No caramel drizzle","skip it"]],
+       tip:"End of work week treat. Vanilla sweet cream foam is lighter than protein foam but still feels like a reward."},
+      {icon:"&#x1F357;",time:"Meal 1 2:30 PM",name:"Tenderloins + Wagyu + Egg Whites",macros:{kcal:801,p:101,c:24,f:32},
+       ings:[["Chicken tenderloins Kirkland","150g"],["Imperial Wagyu Ground Beef","100g"],["Liquid egg whites Kirkland","100g"],["Tangerines","2 tangerines 94g — NO banana"],["Avocado oil","8g"],["Garlic powder cumin salt","season both proteins"]],
+       tip:"Cook wagyu in pan first 6 min then add egg whites at the end. Air fry tenderloins at the same time. Finish tangerines after protein — the fiber slows down the sugar hit. Mix of textures keeps Friday from feeling boring."},
+      {icon:"&#x1F32E;",time:"Work Meal 9:00 PM — Taco Bell",name:"Cantina Chicken Bowl Fresco",macros:{kcal:440,p:27,c:47,f:14},
+       ings:[["Cantina Chicken Bowl","fresco style"],["No sour cream no cheese","fresco order"],["Extra pico jalapenos","0 cal"]],
+       tip:"Friday bowl. End of the work week. You stayed on plan all week."},
+      {icon:"&#x1F352;",time:"Evening 12:00 AM",name:"20g Protein Drink + Chobani + Rice Cakes",macros:{kcal:368,p:42,c:49,f:5},
+       ings:[["20g Protein Drink strawberry","1 bottle 120 cal 20g protein"],["Chobani 20g Protein Yogurt","1 container 140 cal 20g protein"],["Dark chocolate rice cakes","3 cakes 108 cal"]],
+       tip:"Friday night sweet fix. Dark chocolate rice cakes are only 36 cal each and hit the chocolate craving. The protein drink tastes like a smoothie. End of the week — you earned this."}
     ]},
-    sat:{name:"Sat",date:"Apr 12",type:"mod",label:"Weekend",desc:"Eat Out 2200 cal",weekend:true,macros:{cal:2200,pro:150,carb:145,fat:88},meals:[]},
-    sun:{name:"Sun",date:"Apr 13",type:"mod",label:"Weekend",desc:"Eat Out 2200 cal",weekend:true,macros:{cal:2200,pro:150,carb:145,fat:88},meals:[]}
+    sat:{name:"Sat",date:"Apr 12",type:"mod",label:"Weekend",desc:"Eat Out — 2,200 cal",weekend:true,macros:{cal:2200,pro:150,carb:145,fat:88},meals:[]},
+    sun:{name:"Sun",date:"Apr 13",type:"mod",label:"Weekend",desc:"Eat Out — 2,200 cal",weekend:true,macros:{cal:2200,pro:150,carb:145,fat:88},meals:[]}
   }};
 
   // ============================================================
   // WEEKEND NOTES
   // ============================================================
-  var MANNY_WKD = "<div class=\"wnote\"><div class=\"wnote-tt\">Weekend - Eat Out Freely</div><span class=\"wcap\">2,300 kcal cap</span><div class=\"wnote-sub\">Stay under <strong style=\"color:var(--dt)\">2,300 calories</strong> and aim for ~180g protein.<br/><br/><strong style=\"color:var(--dt)\">Start the day:</strong> Oatmeal + banana + whey shake - 525 cal 35g protein before you leave.<br/><br/><strong style=\"color:var(--dt)\">Best lunch:</strong> Chipotle Double Chicken Bowl - 75g protein 645 cal. No cheese no sour cream.<br/><br/><strong style=\"color:var(--dt)\">Ono Hawaiian BBQ:</strong> BBQ Chicken Plate only 1140 cal 66g protein. Skip Chicken Katsu - 1570 cal 86g fat.<br/><br/><strong style=\"color:var(--dt)\">Poke Bowl:</strong> 3 scoops tuna skip spicy mayo - 565 cal 51g protein.<br/><br/><strong style=\"color:var(--dt)\">Evening:</strong> Protein yogurt bowl + berries + Fairlife shake.</div></div>";
+  var MANNY_WKD = "<div class=\"wnote\"><div class=\"wnote-tt\">Weekend — Eat Out Freely</div><span class=\"wcap\">2,300 kcal cap</span><div class=\"wnote-sub\">Stay under <strong style=\"color:var(--dt)\">2,300 calories</strong> and aim for ~180g protein.<br/><br/><strong style=\"color:var(--dt)\">Best lunch pick:</strong> Chipotle Double Chicken Bowl — 75g protein 645 cal. No cheese no sour cream.<br/><br/><strong style=\"color:var(--dt)\">Ono Hawaiian BBQ:</strong> BBQ Chicken Plate only — 1140 cal 66g protein. Skip Chicken Katsu.<br/><br/><strong style=\"color:var(--dt)\">Poke Bowl:</strong> 3 scoops tuna skip spicy mayo — 565 cal 51g protein.<br/><br/><strong style=\"color:var(--dt)\">Evening:</strong> Fairlife shake plus Quest bar fills any protein gap.</div></div>";
 
-  var ARMANDO_WKD = "<div class=\"wnote\"><div class=\"wnote-tt\">Weekend - Eat Out Freely</div><span class=\"wcap\">2,200 kcal cap</span><div class=\"wnote-sub\">Stay under <strong style=\"color:var(--dt)\">2,200 calories</strong> and aim for ~150g protein.<br/><br/><strong style=\"color:var(--dt)\">Before going out:</strong> MRE Lite shake or 20g protein drink at home first. Takes the edge off hunger.<br/><br/><strong style=\"color:var(--dt)\">At restaurants:</strong> Protein first - grilled over fried. Skip the bread basket. One dessert is fine. Avoid juice sweet cocktails and regular soda - your insulin genetics mean sugary drinks hit you harder.<br/><br/><strong style=\"color:var(--dt)\">Starbucks on weekends:</strong> Your Cold Brew + Protein Cold Foam is 120 cal. Fine on a 2200 cal day.<br/><br/><strong style=\"color:var(--dt)\">Bloating tip:</strong> Keep bread pasta and flour tortillas moderate. Rice and corn are easier on your digestion.<br/><br/><strong style=\"color:var(--dt)\">No bananas</strong> - remember this at fruit bowls or acai places.</div></div>";
+  var ARMANDO_WKD = "<div class=\"wnote\"><div class=\"wnote-tt\">Weekend — Eat Out Freely</div><span class=\"wcap\">2,200 kcal cap</span><div class=\"wnote-sub\">Stay under <strong style=\"color:var(--dt)\">2,200 calories</strong> and aim for ~150g protein.<br/><br/><strong style=\"color:var(--dt)\">Before going out:</strong> MRE Lite shake or 20g protein drink at home first.<br/><br/><strong style=\"color:var(--dt)\">At restaurants:</strong> Protein first — grilled over fried. Skip the bread basket. Avoid juice sweet cocktails and regular soda.<br/><br/><strong style=\"color:var(--dt)\">Bloating tip:</strong> Keep bread pasta and flour tortillas moderate. Rice and corn are easier on digestion.<br/><br/><strong style=\"color:var(--dt)\">No bananas</strong> — remember this at fruit bowls or acai places.</div></div>";
 
   // ============================================================
-  // STATE + RENDER
+  // STATE + INIT
   // ============================================================
   var jActive = "mon";
   var mActive = "mon";
   var aActive = "mon";
 
-  function render(data, tabsId, contentId, active, fn, wkdNote) {
+  function render(data, tabsId, cid, active, fn, wkd) {
     renderTabs(data, tabsId, active, fn);
-    renderContent(data, contentId, active, wkdNote);
+    renderContent(data, cid, active, wkd);
   }
 
   window.switchJ = function(d) { jActive=d; render(JAYMES,"jTabs","jContent",jActive,"switchJ",""); };
